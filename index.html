@@ -3,23 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Landmark Decor | Operated by Land Mark Ceiling Fix Cont.</title>
-<meta name="description" content="Landmark Decor is the brand name operated by Land Mark Ceiling Fix Cont., offering interior décor, joinery, glass work, MEP, fabrication, civil work and gypsum solutions across the UAE.">
-<meta name="keywords" content="Landmark Decor, Land Mark Ceiling Fix Cont., interior decor UAE, joinery work Dubai, glass work Sharjah, MEP contractors UAE, gypsum work UAE, fabrication work, civil work, fitout contractors">
-<meta name="author" content="Landmark Decor">
+<meta name="facebook-domain-verification" content="7h1igagijrczaorsnopx4lg7t8xqqe" />
+<title>Land Mark Ceiling | Interior & Decor Contractor UAE</title>
+<meta name="description" content="Land Mark Ceiling is operated by Land Mark Ceiling Fix Cont., offering interior décor, joinery, glass work, MEP, fabrication, civil work and gypsum solutions across the UAE.">
+<meta name="keywords" content="Land Mark Ceiling, Land Mark Ceiling Fix Cont., interior decor UAE, joinery work Dubai, glass work Sharjah, MEP contractors UAE, gypsum work UAE, fabrication work, civil work, fitout contractors">
+<meta name="author" content="Land Mark Ceiling">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.landmarkdecor.info/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.landmarkdecor.info/">
-<meta property="og:title" content="Landmark Decor | Operated by Land Mark Ceiling Fix Cont.">
+<meta property="og:title" content="Land Mark Ceiling | Operated by Land Mark Ceiling Fix Cont.">
 <meta property="og:description" content="Interior décor and fit-out solutions across the UAE under the legal company Land Mark Ceiling Fix Cont.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:site_name" content="Landmark Decor">
+<meta property="og:site_name" content="Land Mark Ceiling">
 <meta property="og:locale" content="en_AE">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Landmark Decor | Operated by Land Mark Ceiling Fix Cont.">
+<meta name="twitter:title" content="Land Mark Ceiling | Operated by Land Mark Ceiling Fix Cont.">
 <meta name="twitter:description" content="Interior décor and fit-out solutions across the UAE under the legal company Land Mark Ceiling Fix Cont.">
 <meta name="twitter:image" content="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80">
 <meta name="facebook-domain-verification" content="YOUR_VERIFICATION_CODE_HERE">
@@ -41,6 +42,14 @@
 html { scroll-behavior: smooth; }
 body { background: var(--cream); color: var(--dark); font-family: 'Raleway', sans-serif; font-weight: 400; overflow-x: hidden; }
 
+/* Logo Image Styling */
+.logo-img {
+  max-height: 50px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 999;
   background: var(--dark2);
@@ -49,11 +58,10 @@ nav {
   border-bottom: 2px solid var(--accent);
 }
 .nav-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem; font-weight: 800;
-  color: var(--white); text-decoration: none; letter-spacing: 0.04em;
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; 
+  height: 76px;
 }
-.nav-logo span { color: var(--accent-light); }
 .nav-links { display: flex; gap: 0; list-style: none; height: 76px; }
 .nav-links li a {
   display: flex; align-items: center; height: 76px;
@@ -152,33 +160,53 @@ nav {
 .sec-title-white { color: var(--white); }
 .accent-bar { width: 60px; height: 3px; background: var(--accent); margin-bottom: 3rem; }
 
-.about { background: var(--white); display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-.about-body { font-size: 0.88rem; line-height: 2.1; color: var(--muted); margin-bottom: 1rem; }
-.about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
-.astat { border-left: 3px solid var(--accent); padding-left: 1.2rem; }
-.astat-num { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 900; color: var(--dark); line-height: 1; }
-.astat-lbl { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; }
-.about-imgs { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 260px 220px; gap: 10px; }
-.about-imgs img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.about-imgs img:first-child { grid-column: 1 / 3; }
+/* --- UPDATED ABOUT LAYOUT --- */
+.about { background: var(--white); display: flex; flex-direction: column; gap: 4rem; }
 
-.legal-box {
-  background: #eef5f3;
-  border-left: 4px solid var(--accent);
-  padding: 1.4rem 1.5rem;
-  margin: 2rem 0 2.2rem;
+/* Split Container: Left (Theory) | Right (License) */
+.about-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
 }
-.legal-box h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  margin-bottom: 0.8rem;
-  color: var(--dark);
+
+/* Left Side: Theory */
+.about-theory { }
+.about-body { font-size: 0.95rem; line-height: 2; color: var(--muted); margin-bottom: 2rem; }
+
+/* Right Side: License Image */
+.about-license {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f9f9f9;
+  border: 1px solid rgba(26,107,90,0.1);
+  padding: 2rem;
+  height: 100%; /* Match height of text if possible, or auto */
 }
-.legal-box p {
-  font-size: 0.84rem;
-  line-height: 1.9;
-  color: var(--muted);
+.about-license img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  border: 1px solid #fff;
 }
+
+/* Horizontal Stats Bar (Below Both) */
+.about-stats-horizontal {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  background: var(--dark);
+  padding: 2.5rem 3rem;
+  width: 100%;
+  border-radius: 4px;
+  flex-wrap: wrap;
+}
+.ah-stat { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+.ah-num { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 800; color: var(--accent-light); line-height: 1; }
+.ah-lbl { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(253,250,245,0.5); }
 
 .services { background: var(--cream); }
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
@@ -304,12 +332,12 @@ footer { background: var(--dark2); border-top: 1px solid rgba(26,107,90,0.2); }
   display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
   gap: 3rem; padding: 5rem 7% 3.5rem;
 }
-.footer-brand .f-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem; font-weight: 800; color: var(--white);
-  display: block; margin-bottom: 1rem;
+.footer-brand {
+    display: flex; flex-direction: column; align-items: flex-start;
 }
-.footer-brand .f-logo span { color: var(--accent-light); }
+.footer-brand .f-logo-img {
+    max-height: 60px; margin-bottom: 1rem; display: block;
+}
 .footer-brand p { font-size: 0.8rem; line-height: 1.9; color: rgba(253,250,245,0.4); max-width: 360px; }
 .footer-col-title {
   font-size: 0.65rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase;
@@ -344,7 +372,7 @@ footer { background: var(--dark2); border-top: 1px solid rgba(26,107,90,0.2); }
 }
 @media (max-width: 960px) {
   .sec { padding: 5rem 5%; }
-  .about { grid-template-columns: 1fr; }
+  .about-split { grid-template-columns: 1fr; } /* Stack About split columns */
   .services-grid, .projects-grid { grid-template-columns: 1fr 1fr; }
   .hero-stats { grid-template-columns: 1fr 1fr; }
   .client-head, .client-row { grid-template-columns: 1fr 1fr; }
@@ -354,6 +382,9 @@ footer { background: var(--dark2); border-top: 1px solid rgba(26,107,90,0.2); }
   .contact-img { height: 320px; }
   .footer-main { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 5% 3rem; }
   .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+  
+  /* About Mobile Adjustments */
+  .about-stats-horizontal { gap: 2rem; }
 }
 @media (max-width: 600px) {
   .services-grid, .projects-grid { grid-template-columns: 1fr; }
@@ -363,13 +394,19 @@ footer { background: var(--dark2); border-top: 1px solid rgba(26,107,90,0.2); }
   .hero-title { font-size: clamp(1.5rem, 8vw, 2.5rem); white-space: normal; }
   .client-head, .client-row { grid-template-columns: 1fr; }
   .client-head .cth:nth-child(2), .client-row .cscope { display: none; }
+  
+  /* About Mobile Adjustments */
+  .about-stats-horizontal { flex-direction: column; gap: 2rem; padding: 2rem 1.5rem; }
 }
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="#home" class="nav-logo">LANDMARK <span>DECOR</span></a>
+  <!-- Updated with Logo Image -->
+  <a href="#home" class="nav-logo">
+    <img src="new landmark logo.png" alt="Land Mark Ceiling Logo" class="logo-img">
+  </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
@@ -385,9 +422,9 @@ footer { background: var(--dark2); border-top: 1px solid rgba(26,107,90,0.2); }
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-tag">Complete Interior &amp; Décor Solutions — UAE</div>
-    <h1 class="hero-title">Landmark <em>Decor</em></h1>
-    <p class="hero-legal">Brand name operated by <strong>Land Mark Ceiling Fix Cont.</strong></p>
-    <p class="hero-desc">Landmark Decor transforms spaces into timeless masterpieces — from Civil &amp; MEP Works to Joinery, Fabrication, Glass Fittings, GRC, GRP and premium finishes across the UAE.</p>
+    <h1 class="hero-title">Land Mark <em>Ceiling</em></h1>
+    <p class="hero-legal">Operated by <strong>Land Mark Ceiling Fix Cont.</strong></p>
+    <p class="hero-desc">Land Mark Ceiling transforms spaces into timeless masterpieces — from Civil &amp; MEP Works to Joinery, Fabrication, Glass Fittings, GRC, GRP and premium finishes across UAE.</p>
     <div class="hero-btns">
       <a href="#projects" class="btn-primary">View Our Work</a>
       <a href="#contact" class="btn-outline">Get A Quote</a>
@@ -401,34 +438,43 @@ footer { background: var(--dark2); border-top: 1px solid rgba(26,107,90,0.2); }
   </div>
 </section>
 
+<!-- REDESIGNED ABOUT SECTION -->
 <section class="about sec" id="about">
-  <div>
-    <div class="sec-label">About the Company</div>
-    <h2 class="sec-title">A Legacy of<br><em>Craftsmanship</em></h2>
-    <div class="accent-bar"></div>
-    <p class="about-body">At Landmark Decor, we transform spaces into timeless masterpieces. We specialize in complete décor solutions — from Civil &amp; MEP Works to Joinery, Fabrication, Glass Fittings, GRC, GRP and finishes.</p>
-    <p class="about-body">Landmark Decor is the operating brand of <strong>Land Mark Ceiling Fix Cont.</strong>, serving clients across the UAE with a strong commitment to quality, creativity and precision.</p>
+  <div class="sec-label">About</div>
 
-    <div class="legal-box">
-      <h3>Company Information</h3>
-      <p><strong>Brand Name:</strong> Landmark Decor<br>
-      <strong>Legal Company Name:</strong> Land Mark Ceiling Fix Cont.<br>
-      <strong>Address:</strong> Al Yarmook, Sheikh Zayed Street, Sharjah, UAE<br>
-      <strong>Contact:</strong> +971 58 904 8200, +971 50 455 6560<br>
-      <strong>Email:</strong> admin@landmarkdecor.info, yunus@landmarkdecor.info</p>
+  <!-- TOP ROW: Left (Theory) | Right (Trading License) -->
+  <div class="about-split">
+    <!-- Left Side: Company Theory -->
+    <div class="about-theory">
+      <h2 class="sec-title">A Legacy of<br><em>Craftsmanship</em></h2>
+      <p class="about-body">At Land Mark Ceiling, we transform spaces into timeless masterpieces. We specialize in complete décor solutions — from Civil &amp; MEP Works to Joinery, Fabrication, Glass Fittings, GRC, GRP and finishes.</p>
+      <p class="about-body">Land Mark Ceiling is operated by <strong>Land Mark Ceiling Fix Cont.</strong>, serving clients across the UAE with a strong commitment to quality, creativity and precision.</p>
     </div>
 
-    <div class="about-stats">
-      <div class="astat"><div class="astat-num">17+</div><div class="astat-lbl">Years Operating</div></div>
-      <div class="astat"><div class="astat-num">500+</div><div class="astat-lbl">Projects Delivered</div></div>
-      <div class="astat"><div class="astat-num">6</div><div class="astat-lbl">Specialisations</div></div>
-      <div class="astat"><div class="astat-num">UAE</div><div class="astat-lbl">Licensed Firm</div></div>
+    <!-- Right Side: Trading License -->
+    <div class="about-license">
+      <img src="new licence.jpeg" alt="Sharjah Trade License">
     </div>
   </div>
-  <div class="about-imgs">
-    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80" alt="Luxury interior living room">
-    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=600&q=80" alt="Woodworking workshop">
-    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Construction detail">
+
+  <!-- BELOW BOTH: Horizontal Experience Stats -->
+  <div class="about-stats-horizontal">
+    <div class="ah-stat">
+      <span class="ah-num">17+</span>
+      <span class="ah-lbl">Years Experience</span>
+    </div>
+    <div class="ah-stat">
+      <span class="ah-num">500+</span>
+      <span class="ah-lbl">Projects Completed</span>
+    </div>
+    <div class="ah-stat">
+      <span class="ah-num">6</span>
+      <span class="ah-lbl">Core Specialisations</span>
+    </div>
+    <div class="ah-stat">
+      <span class="ah-num">100%</span>
+      <span class="ah-lbl">Licensed Firm</span>
+    </div>
   </div>
 </section>
 
@@ -524,8 +570,9 @@ footer { background: var(--dark2); border-top: 1px solid rgba(26,107,90,0.2); }
         <div class="ci-card"><div class="ci-label">Email</div>
         <div class="ci-val">admin@landmarkdecor.info</div>
         <div class="ci-val">yunus@landmarkdecor.info</div></div>
-        <div class="ci-card"><div class="ci-label">Business Identity</div><div class="ci-val">Brand: Landmark Decor</div>
-        <div class="ci-val">Legal Name: Land Mark Ceiling Fix Cont.</div></div>
+        <div class="ci-card"><div class="ci-label">Business Identity</div>
+        <div class="ci-val">Brand: Land Mark Ceiling</div>
+        <div class="ci-val">Legal: Land Mark Ceiling Fix Cont.</div></div>
         <div class="ci-card"><div class="ci-label">Address</div><div class="ci-val">Al Yarmook, Sheikh Zayed Street, Sharjah, UAE</div></div>
       </div>
       <form class="cf" action="mailto:admin@landmarkdecor.info" method="post" enctype="text/plain">
@@ -548,8 +595,8 @@ footer { background: var(--dark2); border-top: 1px solid rgba(26,107,90,0.2); }
 <footer>
   <div class="footer-main">
     <div class="footer-brand">
-      <span class="f-logo">LANDMARK <span>DECOR</span></span>
-      <p>Landmark Decor is the operating brand of Land Mark Ceiling Fix Cont., delivering complete interior and décor solutions across the UAE — from Civil &amp; MEP Works to Joinery, Fabrication, Glass Fittings, and premium finishes.</p>
+      <img src="new landmark logo.png" alt="Land Mark Ceiling Logo" class="f-logo-img">
+      <p>Land Mark Ceiling is operated by Land Mark Ceiling Fix Cont., delivering complete interior and décor solutions across the UAE — from Civil &amp; MEP Works to Joinery, Fabrication, Glass Fittings, and premium finishes.</p>
       <div class="footer-socials">
         <a href="https://www.facebook.com/LandMarkCeiling" target="_blank" rel="noopener" aria-label="Facebook">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -603,7 +650,7 @@ footer { background: var(--dark2); border-top: 1px solid rgba(26,107,90,0.2); }
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 Landmark Decor. Operated by Land Mark Ceiling Fix Cont. All Rights Reserved.</p>
+    <p>© 2026 Land Mark Ceiling. Operated by Land Mark Ceiling Fix Cont. All Rights Reserved.</p>
     <div class="footer-bottom-links">
       <a href="#">Privacy Policy</a>
       <a href="#">Terms of Service</a>
