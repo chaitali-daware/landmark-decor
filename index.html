@@ -41,9 +41,7 @@
 html { scroll-behavior: smooth; }
 body { background: var(--cream); color: var(--dark); font-family: 'Raleway', sans-serif; font-weight: 400; overflow-x: hidden; }
 
-/* --- LOGO FIX CSS --- */
-/* Container to center logo in 76px nav bar */
-/* --- UPDATED NAVBAR & LOGO STYLES --- */
+/* --- UPDATED NAVBAR & LOGO STYLES (Width/Breadth Increased) --- */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 999;
   background: var(--dark2);
@@ -63,11 +61,11 @@ nav {
 
 .logo-img {
   height: auto;
-  /* INCREASED max-height: This allows the logo to scale up, which automatically increases its WIDTH */
+  /* INCREASED max-height: This allows the logo to scale up */
   max-height: 100px; 
   width: auto; 
   
-  /* OPTIONAL: Force a specific minimum width if it's still not wide enough */
+  /* FORCE WIDTH: Ensures the logo is at least this wide */
   min-width: 250px; 
   
   display: block;
@@ -75,10 +73,10 @@ nav {
   object-position: center center;
 }
 
-.nav-links { display: flex; gap: 0; list-style: none; height: 110px; /* INCREASED to match nav */ }
+.nav-links { display: flex; gap: 0; list-style: none; height: 110px; /* Match nav height */ }
 
 .nav-links li a {
-  display: flex; align-items: center; height: 110px; /* INCREASED to match nav */
+  display: flex; align-items: center; height: 110px; /* Match nav height */
   padding: 0 1.3rem; font-size: 0.7rem; font-weight: 600;
   letter-spacing: 0.18em; text-transform: uppercase;
   color: rgba(253,250,245,0.6); text-decoration: none;
@@ -86,15 +84,9 @@ nav {
   border-bottom: 3px solid transparent;
 }
 
-/* --- UPDATED HERO SECTION PADDING --- */
-.hero {
-  min-height: 100vh; 
-  padding-top: 110px; /* INCREASED from 76px to match new Nav height */
-  position: relative; overflow: hidden;
-  display: flex; align-items: center;
-  background: var(--dark);
-}
+/* Hover Effects */
 .nav-links li a:hover { color: var(--accent-light); background: rgba(26,107,90,0.1); border-bottom-color: var(--accent-light); }
+
 .nav-cta {
   font-size: 0.68rem; font-weight: 700;
   letter-spacing: 0.18em; text-transform: uppercase;
@@ -104,7 +96,14 @@ nav {
 }
 .nav-cta:hover { background: var(--accent2); }
 
-
+/* --- HERO SECTION --- */
+.hero {
+  min-height: 100vh; 
+  padding-top: 110px; /* ADJUSTED to match new Nav height (110px) */
+  position: relative; overflow: hidden;
+  display: flex; align-items: center;
+  background: var(--dark);
+}
 .hero-img-bg {
   position: absolute; inset: 0;
   background: url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1800&q=80') center/cover no-repeat;
@@ -178,7 +177,7 @@ nav {
 .sec-title-white { color: var(--white); }
 .accent-bar { width: 60px; height: 3px; background: var(--accent); margin-bottom: 3rem; }
 
-/* --- UPDATED ABOUT LAYOUT --- */
+/* --- ABOUT LAYOUT --- */
 .about { background: var(--white); display: flex; flex-direction: column; gap: 4rem; }
 
 .about-split {
@@ -206,7 +205,7 @@ nav {
 .license-card img {
   width: 100%;
   height: auto;
-  max-height: 350px;
+  max-height: 540px;
   object-fit: contain;
   display: block;
   background: #f9f9f9;
@@ -218,6 +217,23 @@ nav {
   font-weight: 700;
   color: var(--muted);
   text-transform: uppercase;
+}
+
+.legal-box {
+  background: #eef5f3;
+  border-left: 4px solid var(--accent);
+  padding: 1.2rem 1.4rem;
+  margin-top: 1.5rem;
+}
+.legal-box h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.8rem;
+  color: var(--dark);
+}
+.legal-box p {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--muted);
 }
 
 .about-stats-horizontal {
@@ -398,7 +414,7 @@ footer { background: var(--dark2); border-top: 1px solid rgba(26,107,90,0.2); }
 }
 @media (max-width: 960px) {
   .sec { padding: 5rem 5%; }
-  .about-split { grid-template-columns: 1fr; } /* Stack About split columns */
+  .about-split { grid-template-columns: 1fr; } 
   .services-grid, .projects-grid { grid-template-columns: 1fr 1fr; }
   .hero-stats { grid-template-columns: 1fr 1fr; }
   .client-head, .client-row { grid-template-columns: 1fr 1fr; }
@@ -409,7 +425,6 @@ footer { background: var(--dark2); border-top: 1px solid rgba(26,107,90,0.2); }
   .footer-main { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 5% 3rem; }
   .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
   
-  /* About Mobile Adjustments */
   .about-stats-horizontal { gap: 2rem; }
   .license-card { width: 100%; max-width: 400px; }
 }
@@ -422,7 +437,6 @@ footer { background: var(--dark2); border-top: 1px solid rgba(26,107,90,0.2); }
   .client-head, .client-row { grid-template-columns: 1fr; }
   .client-head .cth:nth-child(2), .client-row .cscope { display: none; }
   
-  /* About Mobile Adjustments */
   .about-stats-horizontal { flex-direction: column; gap: 2rem; padding: 2rem 1.5rem; }
 }
 </style>
@@ -450,7 +464,10 @@ footer { background: var(--dark2); border-top: 1px solid rgba(26,107,90,0.2); }
   <div class="hero-content">
     <div class="hero-tag">Complete Interior &amp; Décor Solutions — UAE</div>
     <h1 class="hero-title">Land Mark <em>Ceiling</em></h1>
-    <p class="hero-legal">Operated by <strong>Land Mark Ceiling Fix Cont.</strong></p>
+    <p class="hero-legal">
+Official website of <strong>Land Mark Ceiling</strong>, operated by 
+<strong>Land Mark Ceiling Fix Cont.</strong>, a licensed company registered in Sharjah, UAE under Trade License No. 565103.
+</p>
     <p class="hero-desc">Land Mark Ceiling transforms spaces into timeless masterpieces — from Civil &amp; MEP Works to Joinery, Fabrication, Glass Fittings, GRC, GRP and premium finishes across UAE.</p>
     <div class="hero-btns">
       <a href="#projects" class="btn-primary">View Our Work</a>
@@ -465,7 +482,7 @@ footer { background: var(--dark2); border-top: 1px solid rgba(26,107,90,0.2); }
   </div>
 </section>
 
-<!-- UPDATED PROPERLY FITTED ABOUT SECTION -->
+<!-- ABOUT SECTION -->
 <section class="about sec" id="about">
   <div class="sec-label">About</div>
 
@@ -475,7 +492,18 @@ footer { background: var(--dark2); border-top: 1px solid rgba(26,107,90,0.2); }
     <div class="about-left">
       <h2 class="sec-title">A Legacy of<br><em>Craftsmanship</em></h2>
       <p class="about-body">At Land Mark Ceiling, we transform spaces into timeless masterpieces. We specialize in complete décor solutions — from Civil &amp; MEP Works to Joinery, Fabrication, Glass Fittings, GRC, GRP and finishes.</p>
-      <p class="about-body">Land Mark Ceiling is operated by <strong>Land Mark Ceiling Fix Cont.</strong>, serving clients across UAE with a strong commitment to quality, creativity and precision.</p>
+      <p class="about-body">
+Land Mark Ceiling is operated by <strong>Land Mark Ceiling Fix Cont.</strong>, a licensed company registered in Sharjah, UAE under <strong>Trade License No. 565103</strong>, issued by the <strong>Government of Sharjah</strong>.
+</p>
+
+      <div class="legal-box">
+        <h3>Legal Information</h3>
+        <p><strong>Legal Company Name:</strong> Land Mark Ceiling Fix Cont.</p>
+        <p><strong>Trade License No:</strong> 565103</p>
+        <p><strong>Issued By:</strong> Government of Sharjah</p>
+        <p><strong>Address:</strong> Al Yarmook, Sheikh Zayed Street Flat No. 5, Sharjah, UAE</p>
+        <p><strong>Phone:</strong> +971 50 455 6560</p>
+      </div>
     </div>
 
     <!-- Right Side: License Image -->
@@ -600,10 +628,13 @@ footer { background: var(--dark2); border-top: 1px solid rgba(26,107,90,0.2); }
         <div class="ci-card"><div class="ci-label">Email</div>
         <div class="ci-val">admin@landmarkdecor.info</div>
         <div class="ci-val">yunus@landmarkdecor.info</div></div>
-        <div class="ci-card"><div class="ci-label">Business Identity</div>
-        <div class="ci-val">Brand: Land Mark Ceiling</div>
-        <div class="ci-val">Legal: Land Mark Ceiling Fix Cont.</div></div>
-        <div class="ci-card"><div class="ci-label">Address</div><div class="ci-val">Al Yarmook, Sheikh Zayed Street, Sharjah, UAE</div></div>
+        <div class="ci-card">
+          <div class="ci-label">Business Identity</div>
+          <div class="ci-val">Brand: Land Mark Ceiling</div>
+          <div class="ci-val">Legal: Land Mark Ceiling Fix Cont.</div>
+          <div class="ci-val">Trade License No: 565103</div>
+        </div>
+        <div class="ci-card"><div class="ci-label">Address</div><div class="ci-val">Al Yarmook, Sheikh Zayed Street Flat No. 5, Sharjah, UAE</div></div>
       </div>
       <form class="cf" onsubmit="alert('Thank you. Your enquiry has been received. Our team will contact you shortly.'); return false;">
         <div class="cf-row">
@@ -627,7 +658,7 @@ footer { background: var(--dark2); border-top: 1px solid rgba(26,107,90,0.2); }
     <div class="footer-brand">
       <!-- UPDATED LOGO SOURCE WITH NEW URL -->
       <img src="new_landmark_logo.png" alt="Land Mark Ceiling Logo" class="f-logo-img">
-      <p>Land Mark Ceiling is operated by Land Mark Ceiling Fix Cont., delivering complete interior and décor solutions across the UAE — from Civil &amp; MEP Works to Joinery, Fabrication, Glass Fittings, and premium finishes.</p>
+      <p>Land Mark Ceiling is operated by Land Mark Ceiling Fix Cont., a licensed company registered in Sharjah, UAE under Trade License No. 565103, delivering complete interior and décor solutions across the UAE.</p>
       <div class="footer-socials">
         <a href="https://www.facebook.com/LandMarkCeiling" target="_blank" rel="noopener" aria-label="Facebook">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -672,16 +703,21 @@ footer { background: var(--dark2); border-top: 1px solid rgba(26,107,90,0.2); }
       </div>
       <div class="footer-contact-item">
         <div class="fc-label">Address</div>
-        <div class="fc-val">Al Yarmook, Sheikh Zayed Street, Sharjah, UAE</div>
+        <div class="fc-val">Al Yarmook, Sheikh Zayed Street Flat No. 5, Sharjah, UAE</div>
       </div>
       <div class="footer-contact-item">
         <div class="fc-label">Legal Company Name</div>
         <div class="fc-val">Land Mark Ceiling Fix Cont.</div>
       </div>
+      <div class="footer-contact-item">
+        <div class="fc-label">Trade License</div>
+        <div class="fc-val">No. 565103</div>
+        <div class="fc-val">Issued by Government of Sharjah</div>
+      </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 Land Mark Ceiling. Operated by Land Mark Ceiling Fix Cont. All Rights Reserved.</p>
+    <p>© 2026 Land Mark Ceiling. Operated by Land Mark Ceiling Fix Cont., licensed in Sharjah, UAE under Trade License No. 565103. All Rights Reserved.</p>
     <div class="footer-bottom-links">
       <a href="#">Privacy Policy</a>
       <a href="#">Terms of Service</a>
